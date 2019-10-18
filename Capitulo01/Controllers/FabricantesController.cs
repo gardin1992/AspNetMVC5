@@ -72,5 +72,23 @@ namespace Capitulo01.Controllers
 
             return View(fabricante);
         }
+
+        // GET: Details
+        public ActionResult Details(long? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            Fabricante fabricante = context.Fabricantes.Find(id);
+
+            if (fabricante == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(fabricante);
+        }
     }
 }
