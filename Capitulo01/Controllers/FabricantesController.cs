@@ -20,14 +20,14 @@ namespace Capitulo01.Controllers
             return View(context.Fabricantes.OrderBy(c => c.Nome));
         }
 
-        // GET: Create
+        // GET: Fabricantes/Create
         public ActionResult Create()
         {
 
             return View();
         }
 
-        // POST: Create
+        // POST: Fabricantes/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Fabricante fabricante)
@@ -39,7 +39,7 @@ namespace Capitulo01.Controllers
             return RedirectToAction("Index");
         }
 
-        // GET: Edit
+        // GET: Fabricantes/Edit/5
         public ActionResult Edit(long? id)
         {
             if (id == null)
@@ -57,7 +57,7 @@ namespace Capitulo01.Controllers
             return View(fabricante);
         }
 
-        // POST: Edit
+        // POST: Fabricantes/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Fabricante fabricante)
@@ -73,7 +73,7 @@ namespace Capitulo01.Controllers
             return View(fabricante);
         }
 
-        // GET: Details
+        // GET: Fabricantes/Details/5
         public ActionResult Details(long? id)
         {
             if (id == null)
@@ -89,6 +89,34 @@ namespace Capitulo01.Controllers
             }
 
             return View(fabricante);
+        }
+
+        // GET: Fabricantes/Delete/5
+        public ActionResult Delete(long? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            Fabricante fabricante = context.Fabricantes.Find(id);
+
+            if (fabricante == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(fabricante);
+        }
+
+        //  POST: Fabricantes/Delete/5
+        public ActionResult Delete(long id)
+        {
+            Fabricante fabricante = context.Fabricantes.Find(id);
+            context.Fabricantes.Remove(fabricante);
+            context.SaveChanges();
+
+            return RedirectToAction("Index");
         }
     }
 }
