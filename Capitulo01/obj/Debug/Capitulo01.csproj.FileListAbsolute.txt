@@ -41,6 +41,11 @@ C:\Users\Joao Gardin\Desenvolvimento\Capitulo01\Capitulo01\bin\System.Web.Webpag
 C:\Users\Joao Gardin\Desenvolvimento\Capitulo01\Capitulo01\bin\System.Web.Webpages.Razor.xml
 C:\Users\Joao Gardin\Desenvolvimento\Capitulo01\Capitulo01\bin\System.Web.Helpers.xml
 C:\Users\Joao Gardin\Desenvolvimento\Capitulo01\Capitulo01\bin\System.Web.Mvc.xml
-C:\Users\Joao Gardin\Desenvolvimento\Capitulo01\Capitulo01\obj\Debug\Capitulo01.csprojResolveAssemblyReference.cache
 C:\Users\Joao Gardin\Desenvolvimento\Capitulo01\Capitulo01\obj\Debug\Capitulo01.dll
 C:\Users\Joao Gardin\Desenvolvimento\Capitulo01\Capitulo01\obj\Debug\Capitulo01.pdb
+C:\Users\Joao Gardin\Desenvolvimento\Capitulo01\Capitulo01\obj\Debug\Capitulo01.csprojAssemblyReference.cache
+C:\Users\Joao Gardin\Desenvolvimento\Capitulo01\Capitulo01\obj\Debug\Capitulo01.csproj.CopyComplete
+C:\Users\Joao Gardin\Desenvolvimento\Capitulo01\Capitulo01\bin\EntityFramework.dll
+C:\Users\Joao Gardin\Desenvolvimento\Capitulo01\Capitulo01\bin\EntityFramework.SqlServer.dll
+C:\Users\Joao Gardin\Desenvolvimento\Capitulo01\Capitulo01\bin\EntityFramework.xml
+C:\Users\Joao Gardin\Desenvolvimento\Capitulo01\Capitulo01\bin\EntityFramework.SqlServer.xml
