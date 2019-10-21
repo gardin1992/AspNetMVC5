@@ -12,5 +12,6 @@ namespace Capitulo01.Contexts
         public EFContext() : base("Asp_Net_MVC_CS") { }
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Fabricante> Fabricantes { get; set; }
+        public DbSet<Produto> Produtos { get; set; }
     }
 }
