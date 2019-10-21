@@ -110,11 +110,16 @@ namespace Capitulo01.Controllers
         }
 
         //  POST: Fabricantes/Delete/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Delete(long id)
         {
             Fabricante fabricante = context.Fabricantes.Find(id);
             context.Fabricantes.Remove(fabricante);
             context.SaveChanges();
+            TempData["Message"] = "Fabricante "
+                + fabricante.Nome.ToUpper()
+                + " foi removido.";
 
             return RedirectToAction("Index");
         }
