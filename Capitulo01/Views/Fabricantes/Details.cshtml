@@ -28,6 +28,8 @@
     </div>
 </div>
 
+@Html.Partial("~/Views/Fabricantes/_PorFabricante.cshtml", Model.Produtos.ToList())
+
 @section ScriptPage
     {
     <script src="~/scripts/jquery.validate.min.js"></script>
