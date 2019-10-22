@@ -48,3 +48,4 @@ C:\Users\Joao Gardin\Desenvolvimento\Capitulo01\Capitulo01\bin\EntityFramework.d
 C:\Users\Joao Gardin\Desenvolvimento\Capitulo01\Capitulo01\bin\EntityFramework.SqlServer.dll
 C:\Users\Joao Gardin\Desenvolvimento\Capitulo01\Capitulo01\bin\EntityFramework.xml
 C:\Users\Joao Gardin\Desenvolvimento\Capitulo01\Capitulo01\bin\EntityFramework.SqlServer.xml
+C:\Users\Joao Gardin\Desenvolvimento\Capitulo01\Capitulo01\obj\Debug\Capitulo01.csprojAssemblyReference.cache

@@ -15,6 +15,5 @@ namespace Capitulo01.Models
 
         public Categoria Categoria { get; set; }
         public Fabricante Fabricante { get; set; }
-
     }
 }
