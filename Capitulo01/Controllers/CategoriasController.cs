@@ -80,6 +80,8 @@ namespace Capitulo01.Controllers
 
             Categoria categoria = context.Categorias.Find(id);
 
+            // Categoria categoria = context.Categorias.Where(c => c.Categori// aId == id).Include("Categoria.Produtos").First();
+
             if (categoria == null)
             {
                 return HttpNotFound();
@@ -112,6 +114,10 @@ namespace Capitulo01.Controllers
             Categoria categoria = context.Categorias.Find(id);
             context.Categorias.Remove(categoria);
             context.SaveChanges();
+
+            TempData["Message"] = "Categoria "
+                + categoria.Nome.ToUpper()
+                + " foi removido.";
 
             return RedirectToAction("Index");
         }
