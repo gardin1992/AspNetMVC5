@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.Entity;
-using Capitulo01.Models;
+using Modelo.Cadastros;
+using Modelo.Tabelas;
 
 namespace Capitulo01.Contexts
 {

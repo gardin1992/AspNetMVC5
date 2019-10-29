@@ -5,8 +5,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
-using Capitulo01.Models;
 using System.Net;
+using Modelo.Tabelas;
+using Modelo.Cadastros;
 
 namespace Capitulo01.Controllers
 {

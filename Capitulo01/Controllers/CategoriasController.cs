@@ -1,5 +1,4 @@
 ﻿using Capitulo01.Contexts;
-using Capitulo01.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -7,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Modelo.Tabelas;
 
 namespace Capitulo01.Controllers
 {
