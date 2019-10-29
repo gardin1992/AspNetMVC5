@@ -41,7 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cadastros\FabricanteServico.cs" />
+    <Compile Include="Cadastros\ProdutoServico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tabelas\CategoriaServico.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{a77d226a-9778-4d0e-8ca0-977a2d6f8317}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Persistencia\Persistencia.csproj">
+      <Project>{617f01b7-160e-442d-81db-02ddc25d9364}</Project>
+      <Name>Persistencia</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
