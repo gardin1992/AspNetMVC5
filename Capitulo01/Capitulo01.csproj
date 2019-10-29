@@ -149,6 +149,8 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Areas\Tabelas\Views\web.config" />
+    <Content Include="Areas\Cadastros\Views\web.config" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
@@ -160,16 +162,18 @@
     <Content Include="scripts\jquery.validate.unobtrusive.js" />
     <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Web.config" />
-    <Content Include="Views\Categorias\Create.cshtml" />
-    <Content Include="Views\Categorias\Edit.cshtml" />
-    <Content Include="Views\Categorias\Details.cshtml" />
-    <Content Include="Views\Categorias\Delete.cshtml" />
+    <Content Include="Areas\Tabelas\Views\Categorias\Create.cshtml" />
+    <Content Include="Areas\Tabelas\Views\Categorias\Edit.cshtml" />
+    <Content Include="Areas\Tabelas\Views\Categorias\Details.cshtml" />
+    <Content Include="Areas\Tabelas\Views\Categorias\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\CategoriasController.cs" />
-    <Compile Include="Controllers\FabricantesController.cs" />
-    <Compile Include="Controllers\ProdutosController.cs" />
+    <Compile Include="Areas\Cadastros\CadastrosAreaRegistration.cs" />
+    <Compile Include="Areas\Tabelas\TabelasAreaRegistration.cs" />
+    <Compile Include="Areas\Tabelas\Controllers\CategoriasController.cs" />
+    <Compile Include="Areas\Cadastros\Controllers\FabricantesController.cs" />
+    <Compile Include="Areas\Cadastros\Controllers\ProdutosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -181,23 +185,29 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Views\Categorias\Index.cshtml" />
+    <Content Include="Areas\Tabelas\Views\Categorias\Index.cshtml" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Fabricantes\Index.cshtml" />
-    <Content Include="Views\Fabricantes\Create.cshtml" />
-    <Content Include="Views\Fabricantes\Edit.cshtml" />
-    <Content Include="Views\Fabricantes\Details.cshtml" />
-    <Content Include="Views\Fabricantes\Delete.cshtml" />
+    <Content Include="Areas\Cadastros\Views\Fabricantes\Index.cshtml" />
+    <Content Include="Areas\Cadastros\Views\Fabricantes\Create.cshtml" />
+    <Content Include="Areas\Cadastros\Views\Fabricantes\Edit.cshtml" />
+    <Content Include="Areas\Cadastros\Views\Fabricantes\Details.cshtml" />
+    <Content Include="Areas\Cadastros\Views\Fabricantes\Delete.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Produtos\Index.cshtml" />
-    <Content Include="Views\Produtos\Create.cshtml" />
-    <Content Include="Views\Produtos\Edit.cshtml" />
-    <Content Include="Views\Produtos\Details.cshtml" />
-    <Content Include="Views\Produtos\Delete.cshtml" />
-    <Content Include="Views\Fabricantes\_PorFabricante.cshtml" />
+    <Content Include="Areas\Cadastros\Views\Produtos\Index.cshtml" />
+    <Content Include="Areas\Cadastros\Views\Produtos\Create.cshtml" />
+    <Content Include="Areas\Cadastros\Views\Produtos\Edit.cshtml" />
+    <Content Include="Areas\Cadastros\Views\Produtos\Details.cshtml" />
+    <Content Include="Areas\Cadastros\Views\Produtos\Delete.cshtml" />
+    <Content Include="Areas\Cadastros\Views\Fabricantes\_PorFabricante.cshtml" />
+    <Content Include="Areas\Tabelas\Views\Categorias\_PorCategoria.cshtml" />
+    <Content Include="Areas\Cadastros\Views\Produtos\_PartialDetailsContentPanel.cshtml" />
+    <Content Include="Areas\Cadastros\Views\Produtos\_PartialEditContentPanel.cshtml" />
     <Content Include="Views\Categorias\_PorCategoria.cshtml" />
-    <Content Include="Views\Produtos\_PartialDetailsContentPanel.cshtml" />
-    <Content Include="Views\Produtos\_PartialEditContentPanel.cshtml" />
+    <Content Include="Views\Categorias\Create.cshtml" />
+    <Content Include="Views\Categorias\Delete.cshtml" />
+    <Content Include="Views\Categorias\Details.cshtml" />
+    <Content Include="Views\Categorias\Edit.cshtml" />
+    <Content Include="Views\Categorias\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -225,6 +235,13 @@
     <Analyzer Include="..\packages\Microsoft.NetCore.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetCore.CSharp.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetFramework.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\Cadastros\Models\" />
+    <Folder Include="Areas\Cadastros\Views\Shared\" />
+    <Folder Include="Areas\Tabelas\Models\" />
+    <Folder Include="Areas\Tabelas\Views\Shared\" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

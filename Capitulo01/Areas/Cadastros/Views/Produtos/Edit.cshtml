@@ -1,0 +1,53 @@
+﻿@model Modelo.Cadastros.Produto
+
+@{
+    ViewBag.Title = "Visualizando os dados de um PRODUTO";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Alteração dos dados de um Produto
+        </div>
+
+        <div class="panel-body">
+            @Html.Partial("~/Areas/Cadastros/Views/Produtos/_PartialEditContentPanel.cshtml", Model)
+
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Salvar" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-footer panel-info">
+            <input type="submit" value="Gravar alterações" class="btn btn-info" />
+            @Html.ActionLink("Retornar para a listagem de Produtos", "Index", null, new { @class = "btn btn-warning" })
+        </div>
+    </div>
+}
+
+<div>
+    
+</div>
+
+@section	ScriptPage	{
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('li').removeClass("active");
+            $('#liProdutos').addClass("active");
+        });
+    </script>
+}
