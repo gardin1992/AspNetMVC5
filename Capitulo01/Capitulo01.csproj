@@ -197,6 +197,7 @@
     <Content Include="Views\Fabricantes\_PorFabricante.cshtml" />
     <Content Include="Views\Categorias\_PorCategoria.cshtml" />
     <Content Include="Views\Produtos\_PartialDetailsContentPanel.cshtml" />
+    <Content Include="Views\Produtos\_PartialEditContentPanel.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
