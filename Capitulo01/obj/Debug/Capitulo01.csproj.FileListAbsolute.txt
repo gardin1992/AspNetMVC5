@@ -107,3 +107,9 @@ C:\Users\Joao Gardin\Desenvolvimento\AspNetMVC5\Capitulo01\bin\Modelo.pdb
 C:\Users\Joao Gardin\Desenvolvimento\AspNetMVC5\Capitulo01\bin\Persistencia.pdb
 C:\Users\Joao Gardin\Desenvolvimento\AspNetMVC5\Capitulo01\bin\Servico.pdb
 C:\Users\Joao Gardin\Desenvolvimento\AspNetMVC5\Capitulo01\bin\Persistencia.dll.config
+C:\Users\Joao Gardin\Desenvolvimento\AspNetMVC5\Capitulo01\bin\pt-br\System.Web.Helpers.resources.dll
+C:\Users\Joao Gardin\Desenvolvimento\AspNetMVC5\Capitulo01\bin\pt-br\System.Web.Mvc.resources.dll
+C:\Users\Joao Gardin\Desenvolvimento\AspNetMVC5\Capitulo01\bin\pt-br\System.Web.Razor.resources.dll
+C:\Users\Joao Gardin\Desenvolvimento\AspNetMVC5\Capitulo01\bin\pt-br\System.Web.WebPages.resources.dll
+C:\Users\Joao Gardin\Desenvolvimento\AspNetMVC5\Capitulo01\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Joao Gardin\Desenvolvimento\AspNetMVC5\Capitulo01\bin\pt-br\System.Web.WebPages.Razor.resources.dll
