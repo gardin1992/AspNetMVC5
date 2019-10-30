@@ -9,7 +9,7 @@ namespace Persistencia.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationDataLossAllowed = false;
+            AutomaticMigrationDataLossAllowed = true;
             AutomaticMigrationsEnabled = true;
             ContextKey = "Persistencia.Contexts.EFContext";
         }
