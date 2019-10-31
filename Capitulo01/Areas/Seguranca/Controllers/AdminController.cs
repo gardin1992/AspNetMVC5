@@ -21,7 +21,7 @@ namespace Capitulo01.Areas.Seguranca.Controllers
         }
 
         // GET: Seguranca/Admin/Create
-        [Authorize]
+        [Authorize(Roles = "Administradores")]
         public ActionResult Create()
         {
             return View();

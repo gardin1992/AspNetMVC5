@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Capitulo01.Infraestrutura
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -20,35 +21,48 @@
                 </h1>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col-xs-3 col-md-3 bg-success">
-                <ul class="nav nav-pills nav-stacked">
-                    <li id="liHome" role="presentation" class="active"><a href="#">Home</a></li>
-                    <li id="liCategorias" role="presentation">@Html.ActionLink("Categorias", "Index", "Categorias")</li>
-                    <li id="liFabricantes" role="presentation">@Html.ActionLink("Fabricantes", "Index", "Fabricantes",	new	{ area = "Cadastros" }, null)</li>
-                    <li id="liProdutos" role="presentation">@Html.ActionLink("Produtos", "Index", "Produtos",	new	{ area = "Cadastros" }, null)</li>
-                    <li id="liUsuarios" role="presentation">@Html.ActionLink("Admin", "Index", "Admin",	new	{ area = "Seguranca" }, null)</li>
-                </ul>
-            </div>
-
-            <div class="col-xs-9 col-md-9">
-                <br />
-                @RenderBody()
-            </div>
+        <div style="text-align:right;">
+            @{
+                if (Html.GetAuthenticatedUser().ToString() != "")
+                {
+                    @Html.GetAuthenticatedUser();
+                    @Html.ActionLink("	-	Sair", "Logout", "Account");
+                }
+                else
+                {
+                    @Html.ActionLink("Acessar", "Login", "Account", new { area = "Seguranca" }, null);
+                }
+            }
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3 col-md-3 bg-success">
+            <ul class="nav nav-pills nav-stacked">
+                <li id="liHome" role="presentation" class="active"><a href="#">Home</a></li>
+                <li id="liCategorias" role="presentation">@Html.ActionLink("Categorias", "Index", "Categorias")</li>
+                <li id="liFabricantes" role="presentation">@Html.ActionLink("Fabricantes", "Index", "Fabricantes", new { area = "Cadastros" }, null)</li>
+                <li id="liProdutos" role="presentation">@Html.ActionLink("Produtos", "Index", "Produtos", new { area = "Cadastros" }, null)</li>
+                <li id="liUsuarios" role="presentation">@Html.ActionLink("Admin", "Index", "Admin", new { area = "Seguranca" }, null)</li>
+            </ul>
         </div>
 
-        <br />
-        <div class="row">
-            <div class="col-xs-12 col-md-12 bg-danger">
-                <small>Layout com Bootstrap</small>
-            </div>
+        <div class="col-xs-9 col-md-9">
+            <br />
+            @RenderBody()
         </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="col-xs-12 col-md-12 bg-danger">
+            <small>Layout com Bootstrap</small>
+        </div>
+    </div>
     </div>
 
     <script src="@Url.Content("~/scripts/jquery-1.10.2.js")"></script>
     <script src="@Url.Content("~/scripts/bootstrap.js")"></script>
-    
+
     @RenderSection("ScriptPage", false)
 </body>
 </html>
