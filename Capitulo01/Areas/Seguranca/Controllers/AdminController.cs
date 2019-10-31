@@ -14,12 +14,14 @@ namespace Capitulo01.Areas.Seguranca.Controllers
     public class AdminController : Controller
     {
         // GET: Seguranca/Admin
+        [Authorize]
         public ActionResult Index()
         {
             return View(GerenciadorUsuario.Users);
         }
 
         // GET: Seguranca/Admin/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -48,6 +50,7 @@ namespace Capitulo01.Areas.Seguranca.Controllers
             return View(model);
         }
 
+        [Authorize]
         public ActionResult Edit(string id)
         {
             if(id == null)
@@ -89,7 +92,23 @@ namespace Capitulo01.Areas.Seguranca.Controllers
             return View(uvm);
         }
 
+        [Authorize]
         public ActionResult Delete(string id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Usuario usuario = GerenciadorUsuario.FindById(id);
+            if (usuario == null)
+            {
+                return HttpNotFound();
+            }
+            return View(usuario);
+        }
+
+        [Authorize]
+        public ActionResult Details(string id)
         {
             if (id == null)
             {
