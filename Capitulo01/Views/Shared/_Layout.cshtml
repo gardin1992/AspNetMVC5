@@ -26,9 +26,9 @@
                 <ul class="nav nav-pills nav-stacked">
                     <li id="liHome" role="presentation" class="active"><a href="#">Home</a></li>
                     <li id="liCategorias" role="presentation">@Html.ActionLink("Categorias", "Index", "Categorias")</li>
-                    <li id="liFabricantes" role="presentation">@Html.ActionLink("Fabricantes", "Index", "Fabricantes")</li>
-                    <li id="liProdutos" role="presentation">@Html.ActionLink("Produtos", "Index", "Produtos")</li>
-                    <li id="liUsuarios" role="presentation">@Html.ActionLink("Admin", "Index", "Admin")</li>
+                    <li id="liFabricantes" role="presentation">@Html.ActionLink("Fabricantes", "Index", "Fabricantes",	new	{ area = "Cadastros" }, null)</li>
+                    <li id="liProdutos" role="presentation">@Html.ActionLink("Produtos", "Index", "Produtos",	new	{ area = "Cadastros" }, null)</li>
+                    <li id="liUsuarios" role="presentation">@Html.ActionLink("Admin", "Index", "Admin",	new	{ area = "Seguranca" }, null)</li>
                 </ul>
             </div>
 
